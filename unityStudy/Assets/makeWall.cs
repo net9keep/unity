@@ -6,9 +6,12 @@ public class makeWall : MonoBehaviour {
 	float time = 1.0f;
 	float CTime = 0;
 	float AddTime = 1.0f;
+	Random rd = new Random();
 	// Use this for initialization
 	void Start () {
+		
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,6 +23,7 @@ public class makeWall : MonoBehaviour {
 	}
 	IEnumerator makePrefab(float times){
 		yield return new WaitForSeconds (times);
-		Instantiate(prefab);
+		Instantiate(prefab, new Vector3(0,Random.Range(-10.0f,10.0f),0),Quaternion.identity);
+
 	}
 }

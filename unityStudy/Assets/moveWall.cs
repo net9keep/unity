@@ -3,10 +3,9 @@ using System.Collections;
 
 
 public class moveWall : MonoBehaviour {
-	
 	// Use this for initialization
 	void Start () {
-		transform.position = new Vector3 (0.0f,0.0f,0.0f);
+		transform.position = new Vector3 (0.0f,Random.Range(-10.0f,10.0f),0.0f);
 		StartCoroutine ("Coroutine", 1.5f);
 	}
 	
