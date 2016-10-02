@@ -18,6 +18,8 @@ public class moveWall : MonoBehaviour {
 	}
 	IEnumerator Coroutine(float time){
 		yield return  new WaitForSeconds (time);
+		singleton.Instance.score += 10;
+		Debug.Log (singleton.Instance.score);
 		Destroy (gameObject);
 	}
 }

@@ -24,7 +24,7 @@ public class makeWall_Prefab : MonoBehaviour {
 		yield return new WaitForSeconds (times);
 		Instantiate(prefab, new Vector3(0,Random.Range(-10.0f,10.0f),0),Quaternion.identity);
 		float r = Random.Range (0, 1.9f);
-		float y = Random.Range (0, 3.0f);
+		float y = Random.Range (0.1f, 3.0f);
 		if ((int)r == 0) {
 			Instantiate (sprite, new Vector3 (0, y, 0), Quaternion.identity);
 		} else {
