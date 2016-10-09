@@ -15,16 +15,13 @@ public class moveWall : MonoBehaviour {
 		empty_wall.position = new Vector3 (0, 0, 0);
 		StartCoroutine ("Coroutine", 1.5f);
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		float speed = 0.1f;
-		transform.Translate (Vector3.left * speed);
+		transform.Translate (Vector3.left * Time.time * speed);
 	}
 	IEnumerator Coroutine(float time){
 		yield return  new WaitForSeconds (time);
-		singleton.getInstance.score += 10;
-		Debug.Log (singleton.getInstance.score);
 		Destroy (gameObject);
 	}
 }
