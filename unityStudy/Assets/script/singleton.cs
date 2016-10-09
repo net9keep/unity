@@ -12,6 +12,7 @@ public class singleton{
 			return instance;
 		}
 	}
-
+	public int chk_wall = 0;
+	public int chk_ewall = 0;
 	public int score = 0;
 }
