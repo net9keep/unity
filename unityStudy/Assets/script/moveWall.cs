@@ -7,7 +7,7 @@ public class moveWall : MonoBehaviour {
 	public Vector3 emptyWall;
 	// Use this for initialization
 	void Start () {
-		float yPosition = Random.Range (5f, 10f);
+		float yPosition = Random.Range (5f, 7f);
 		up.position = new Vector3 (0, yPosition, 0);
 		down.position = new Vector3 (0, -yPosition, 0);
 		emptyWall = empty_wall.localScale;

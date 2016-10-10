@@ -15,5 +15,16 @@ public class MoveBird : MonoBehaviour {
 			transform.Translate (Vector3.up * 0.2f);
 		else
 			transform.Translate (Vector3.down * 0.2f);
+		switch ((int)transform.position.y) {
+		case 12:
+			transform.Translate (Vector3.down*0.2f);
+			break;
+		case -12:
+			transform.Translate (Vector3.up*0.2f);
+			break;
+		default:
+			break;	
+		}
+			
 	}
 }
