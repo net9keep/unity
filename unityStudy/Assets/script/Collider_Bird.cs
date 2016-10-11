@@ -12,10 +12,7 @@ public class Collider_Bird : MonoBehaviour {
 		
 		if (col.transform.tag == "wall")
 			Debug.Log ("crash");
-		else if (col.transform.tag == "empty_wall") {
-			singleton.getInstance.score += 10;
-			Debug.Log (singleton.getInstance.score);
-		}
+//		
 	}
 
 	// Update is called once per frame
