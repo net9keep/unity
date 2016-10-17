@@ -7,12 +7,13 @@ public class moveWall : MonoBehaviour {
 	public Vector3 emptyWall;
 	// Use this for initialization
 	void Start () {
+		setTransformPosition ();
 		float yPosition = Random.Range (5f, 7f);
-		up.position = new Vector3 (0, yPosition, 0);
-		down.position = new Vector3 (0, -yPosition, 0);
+		up.position = new Vector3 (5, yPosition, 0);
+		down.position = new Vector3 (5, -yPosition, 0);
 		emptyWall = empty_wall.localScale;
 		emptyWall.y = 2 * yPosition;
-		empty_wall.position = new Vector3 (0, 0, 0);
+		empty_wall.position = new Vector3 (5, 0, 0);
 		StartCoroutine ("Coroutine", 1.5f);
 	}
 	// Update is called once per frame
@@ -21,7 +22,12 @@ public class moveWall : MonoBehaviour {
 		transform.Translate (Vector3.left * Time.time * speed);
 	}
 	IEnumerator Coroutine(float time){
-		yield return  new WaitForSeconds (time);
-		Destroy (gameObject);
+		while (true) {
+			yield return  new WaitForSeconds (time);
+			setTransformPosition ();
+		}
+	}
+	void setTransformPosition(){
+		transform.position = new Vector3 (5, 0, 0);
 	}
 }
