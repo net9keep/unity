@@ -14,7 +14,7 @@ public class moveWall : MonoBehaviour {
 		emptyWall = empty_wall.localScale;
 		emptyWall.y = 2 * yPosition;
 		empty_wall.position = new Vector3 (5, 0, 0);
-		StartCoroutine ("Coroutine", 1.5f);
+		StartCoroutine ("Coroutine", 2.0f);
 	}
 	// Update is called once per frame
 	void Update () {

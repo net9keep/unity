@@ -14,7 +14,7 @@ public class makeWall_Prefab : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time > CTime) {
+		if (Time.time > CTime && singleton.getInstance.wall_count < 5) {
 			StartCoroutine ("makePrefab", time);
 			CTime = Time.time + AddTime;
 		}
@@ -22,6 +22,7 @@ public class makeWall_Prefab : MonoBehaviour {
 	}
 	IEnumerator makePrefab(float times){
 		yield return new WaitForSeconds (times);
-		Instantiate(prefab, new Vector3(0,Random.Range(-10.0f,10.0f),0),Quaternion.identity);
+		Instantiate (prefab, new Vector3 (0, Random.Range (-10.0f, 10.0f), 0), Quaternion.identity);
+		singleton.getInstance.wall_count += 1;
 	}
 }
