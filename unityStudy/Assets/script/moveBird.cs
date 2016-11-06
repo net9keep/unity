@@ -14,13 +14,13 @@ public class MoveBird : MonoBehaviour {
 			transform.Translate (Vector3.up * 0.1f);
 		else
 			transform.Translate (Vector3.down * 0.1f);
-		if (!(transform.position.y > -8 && transform.position.y < 8))
+		if (!(transform.position.y > -9 && transform.position.y < 9))
 			singleton.getInstance.chk = 1;
 		switch ((int)transform.position.y) {
-		case 8:
+		case 9:
 			transform.Translate (Vector3.down*0.1f);
 			break;
-		case -8:
+		case -9:
 			transform.Translate (Vector3.up*0.1f);
 			break;
 		default:
