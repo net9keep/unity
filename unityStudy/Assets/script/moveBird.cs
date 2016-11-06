@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class MoveBird : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +14,8 @@ public class MoveBird : MonoBehaviour {
 			transform.Translate (Vector3.up * 0.1f);
 		else
 			transform.Translate (Vector3.down * 0.1f);
+		if (!(transform.position.y > -7 && transform.position.y < 7))
+			singleton.getInstance.chk = 1;
 		switch ((int)transform.position.y) {
 		case 8:
 			transform.Translate (Vector3.down*0.1f);

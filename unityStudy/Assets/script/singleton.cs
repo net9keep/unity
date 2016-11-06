@@ -14,4 +14,5 @@ public class singleton{
 	}
 	public int wall_count = 0;
 	public int score = 0;
+	public int chk = 0;
 }

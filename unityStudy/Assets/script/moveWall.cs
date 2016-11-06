@@ -13,7 +13,7 @@ public class moveWall : MonoBehaviour {
 		down.position = new Vector3 (5, -yPosition, 0);
 		emptyWall = empty_wall.localScale;
 		emptyWall.y = 2 * yPosition;
-		empty_wall.position = new Vector3 (20, 0, 0);
+		empty_wall.position = new Vector3 (5, 0, 0);
 	}
 	void Awake(){
 		setTransformPosition ();

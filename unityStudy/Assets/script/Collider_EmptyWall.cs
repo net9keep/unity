@@ -9,11 +9,11 @@ public class Collider_EmptyWall : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (chk == 0) {
+		if (singleton.getInstance.chk == 0) {
 			if (col.transform.tag == "bird") {
-				chk = 1;
 				singleton.getInstance.score += 10;
 				Debug.Log (singleton.getInstance.score);
+				Debug.Log (singleton.getInstance.chk);
 			}
 		}
 	}

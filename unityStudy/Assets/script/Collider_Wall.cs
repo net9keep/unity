@@ -12,6 +12,7 @@ public class Collider_Wall : MonoBehaviour {
 		if (chk != 1) {
 			if (col.transform.tag == "bird") {
 				Debug.Log ("crash");
+				singleton.getInstance.chk = 1;
 			}
 		}
 	}
